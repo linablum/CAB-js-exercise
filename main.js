@@ -120,3 +120,20 @@ function sameNum(array) {
 console.log(sameNum(arrayX));
 
 myColor = ["Red", "Green", "White", "Black"];
+
+function combine(array) {
+  let string = "";
+  for (let e = 0; e < array.length; e++) {
+    string = string + array[e] + ", ";
+  }
+  return string;
+}
+
+console.log(combine(myColor));
+
+function reverseNum(number)
+
+
+
+
+let exampleNum = 32443;
