@@ -38,18 +38,85 @@ rosegoldQuokkas.sort();
 console.log(rosegoldQuokkas[0]);
 console.log(rosegoldQuokkas[8]);
 
-for (let i = 0; i < 8; i++) {
+for (let i = 0; i < 9; i++) {
   console.log(rosegoldQuokkas[i]);
 }
 
-let quokkasAge = [44, 28, 35, 27, john, 41, 34, marta, ale];
+let quokkasAge = [44, 28, 35, 27, 1, 41, 34, 1, 1];
 
 let i = 0;
-while (i < 8) {
+while (i < 9) {
   console.log(quokkasAge[i]);
   i++;
 }
 
-for (let i = 0; i < 8; i++) {
-  console.log();
+let j = 0;
+while (j < 9) {
+  if (quokkasAge[j] % 2 === 0) console.log(quokkasAge[j]);
+  j++;
 }
+
+for (let i = 0; i < 9; i++) {
+  if (quokkasAge[i] % 2 === 0) console.log(quokkasAge[i]);
+}
+
+//functions
+
+function lowNum(array) {
+  let a = 1;
+  let lowest = array[0];
+  while (a < array.length) {
+    if (array[a] < lowest) {
+      lowest = array[a];
+    }
+    a++;
+  }
+  return lowest;
+}
+
+// function lowNum(array) {
+//   let lowest = array[0];
+//   for (let a = 1; a < array.length; a++) {
+//     if (array[a] < lowest) {
+//       lowest = array[a];
+//     }
+//   }
+//   return lowest;
+// }
+
+function lowNum(array) {
+  let b = 1;
+  let highest = array[0];
+  while (b < array.length) {
+    if (array[b] > highest) {
+      highest = array[b];
+    }
+    b++;
+  }
+  return highest;
+}
+
+let arrayX = [83, 45, 17, 3, 9, 102, 10, 45, 77, 33, 17];
+
+console.log(lowNum(arrayX));
+
+function print(array, index) {
+  return array[index];
+}
+
+console.log(print(arrayX, 6));
+
+function sameNum(array) {
+  let doubles = [];
+  for (let c = 0; c < array.length; c++) {
+    for (let d = c + 1; d < array.length; d++) {
+      if (array[c] === array[d]) {
+        doubles.push(array[c]);
+      }
+    }
+  }
+  return doubles;
+}
+console.log(sameNum(arrayX));
+
+myColor = ["Red", "Green", "White", "Black"];
