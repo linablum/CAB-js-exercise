@@ -131,9 +131,34 @@ function combine(array) {
 
 console.log(combine(myColor));
 
-function reverseNum(number)
+//js strings
+//exercise 1
 
+function reverseNum(number) {
+  return number.toString().split("").reverse().join("");
+}
 
+console.log(reverseNum(32443));
 
+//exercise 2
 
-let exampleNum = 32443;
+function alphabet(string) {
+  return string.split("").sort().join("");
+}
+
+console.log(alphabet("webmaster"));
+
+//exercise 3
+
+function upperCase(sentence) {
+  return sentence
+    .split(" ")
+    .map(function (word) {
+      return word.charAt(0).toUpperCase();
+    })
+    .join(" ");
+}
+
+console.log(upperCase("prince of persia"));
+
+//exercise 4
