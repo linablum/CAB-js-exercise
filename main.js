@@ -154,7 +154,7 @@ function upperCase(sentence) {
   return sentence
     .split(" ")
     .map(function (word) {
-      return word.charAt(0).toUpperCase();
+      return word[0].toUpperCase() + word.substring(1);
     })
     .join(" ");
 }
@@ -162,3 +162,16 @@ function upperCase(sentence) {
 console.log(upperCase("prince of persia"));
 
 //exercise 4
+
+function longWord(words) {
+  let long = "";
+  let arrayL = words.split(" ");
+  for (let k = 0; k < arrayL.length; k++) {
+    if (long.length < arrayL[k].length) {
+      long = arrayL[k];
+    }
+  }
+  return long;
+}
+
+console.log(longWord("Web Development Tutorial"));
